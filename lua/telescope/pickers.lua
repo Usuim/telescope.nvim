@@ -437,7 +437,7 @@ function Picker:find()
       keys = mode ~= "n" and "<ESC>A<ESC>" or "A<ESC>"
     else
       -- always fully retrigger insert mode: required for going from one picker to next
-      keys = mode ~= "n" and "<ESC>A" or "A"
+      keys = mode ~= "n" and "<ESC>A" or "<ESC>A"
     end
     a.nvim_feedkeys(a.nvim_replace_termcodes(keys, true, false, true), "n", true)
   else
