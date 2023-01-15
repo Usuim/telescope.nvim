@@ -491,8 +491,8 @@ actions.insert_symbol_i = function(prompt_bufnr)
   local symbol = action_state.get_selected_entry().value[1]
   actions.close(prompt_bufnr)
   vim.schedule(function()
-    vim.cmd [[stopinsert]]
-    --vim.api.nvim_put({ symbol }, "", true, true)
+    vim.cmd [[startinsert]]
+    vim.api.nvim_put({ symbol }, "", true, true)
   end)
 end
 
